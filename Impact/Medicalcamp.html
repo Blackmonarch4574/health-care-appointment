@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Request Free Medical Health Setup</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+    }
+    .container {
+        max-width: 600px;
+        margin: 50px auto;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        background-color: #fff;
+        text-align: center; /* Center align the content */
+    }
+    h2 {
+        color: #007bff; /* Blue color for headings */
+    }
+    p {
+        color: #666;
+    }
+    label {
+        display: block;
+        margin-top: 10px;
+        color: #333;
+        text-align: left; /* Align labels to the left */
+    }
+    input[type="text"], textarea {
+        width: calc(100% - 22px); /* Adjust width to account for padding and borders */
+        padding: 10px;
+        margin-top: 5px;
+        border: 1px solid #007bff; /* Blue border for input fields */
+        border-radius: 4px;
+    }
+    input[type="text"]:focus, textarea:focus {
+        outline: none;
+        border-color: #0056b3; /* Darker blue when focused */
+    }
+    button[type="submit"] {
+        margin-top: 20px;
+        padding: 10px 20px;
+        background-color: #007bff; /* Blue background for button */
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    button[type="submit"]:hover {
+        background-color: #0056b3; /* Darker blue on hover */
+    }
+</style>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f0f7f9; /* Light blue background */
+        color: #333; /* Dark text color */
+    }
+    header {
+        background: #0073e6; /* Blue header background */
+        color: #fff;
+        padding: 20px 0;
+        text-align: center;
+    }
+    header h1 {
+        margin: 0;
+        font-size: 24px;
+    }
+    nav {
+        margin-top: 20px; /* Add margin to separate navigation */
+    }
+    nav ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+    }
+    nav ul li {
+        margin: 0 10px;
+    }
+    nav ul li a {
+        color: #fff;
+        text-decoration: none;
+        font-weight: bold;
+        transition: color 0.3s;
+    }
+    nav ul li a:hover {
+        color: #005bb5; /* Darker blue on hover */
+    }
+    main {
+        padding: 20px;
+        text-align: left; /* Align main content to the left */
+        max-width: 800px; /* Set maximum width */
+        margin: 0 auto; /* Center the content */
+    }
+    h2 {
+        color: #0073e6; /* Blue heading */
+        border-bottom: 2px solid #0073e6; /* Blue bottom border */
+        padding-bottom: 10px;
+        font-size: 20px;
+        margin-bottom: 20px;
+    }
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        text-align: left;
+    }
+    ul li {
+        margin-bottom: 15px;
+    }
+    ul li strong {
+        font-weight: bold;
+    }
+    a {
+        color: #0073e6; /* Blue link color */
+        text-decoration: none;
+        transition: color 0.3s;
+    }
+    a:hover {
+        color: #005bb5; /* Darker blue on hover */
+    }
+    footer {
+        background: #333;
+        color: #fff;
+        text-align: center;
+        padding: 20px 0;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+    }
+</style>
+</head>
+<body>
+    <header>
+        <h1>Health Equity Advocacy</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="co.html">Contribution</a></li>
+                <li><a href="donation.html">Donation</a></li>
+                <li><a href="Medicalcamp.html">Medical Camp</a></li>
+                <li><a href="sstory.html">Success Stories</a></li>
+                <li><a href="../login.php">Appointment Booking</a></li>
+            </ul>
+        </nav>
+    </header>
+<div class="container">
+    <h2>Request a Free Medical Health Setup</h2>
+    <p>
+        If your village needs a free medical health setup, please fill out the form below with the necessary details. Our team will review your request and get back to you as soon as possible.
+    </p>
+    <form action="medicalcamp.php" method="post">
+        <label for="villageName">Village Name:</label>
+        <input type="text" id="villageName" name="villageName" required>
+
+        <label for="contactPerson">Contact Person:</label>
+        <input type="text" id="contactPerson" name="contactPerson" required>
+
+        <label for="contactNumber">Contact Number:</label>
+        <input type="text" id="contactNumber" name="contactNumber" required>
+
+        <label for="email">Email Address:</label>
+        <input type="text" id="email" name="email" required>
+
+        <label for="details">Details of the Request:</label>
+        <textarea id="details" name="details" rows="5" required></textarea>
+
+        <button type="submit">Submit Request</button>
+    </form>
+</div>
+</body>
+</html>

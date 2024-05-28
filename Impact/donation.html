@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital Name - Make a Donation</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #007bff;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+            margin-bottom: 20px;
+        }
+        main {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            margin: 0;
+            font-size: 28px;
+        }
+        h2 {
+            color: #007bff;
+            margin-top: 20px;
+        }
+        h3 {
+            margin-top: 30px;
+        }
+        .donation-method {
+            margin-top: 20px;
+        }
+        form {
+            margin-top: 20px;
+        }
+        label {
+            display: block;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="number"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        select {
+            appearance: none;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="%23333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 9l-7 7-7-7"></path></svg>');
+            background-repeat: no-repeat;
+            background-position: right 10px center;
+            padding-right: 30px;
+        }
+        textarea {
+            resize: vertical;
+        }
+        button[type="submit"] {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+        .suggested-donations {
+            list-style-type: none;
+            padding: 0;
+            margin: 10px 0;
+        }
+        .suggested-donations li {
+            display: inline-block;
+            margin-right: 10px;
+        }
+        .suggested-donations li:last-child {
+            margin-right: 0;
+        }
+        .suggested-donations li a {
+            text-decoration: none;
+            color: #007bff;
+            border: 1px solid #007bff;
+            padding: 5px 10px;
+            border-radius: 4px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .suggested-donations li a:hover {
+            background-color: #007bff;
+            color: #fff;
+        }
+        #honor-memory-section {
+            display: none;
+        }
+
+        @media (max-width: 600px) {
+            main {
+                padding: 15px;
+            }
+            h1 {
+                font-size: 24px;
+            }
+            h2, h3 {
+                font-size: 20px;
+            }
+            button[type="submit"] {
+                width: 100%;
+            }
+        }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f7f9; /* Light blue background */
+            color: #333; /* Dark text color */
+        }
+        header {
+            background: #0073e6; /* Blue header background */
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+        nav {
+            margin-top: 20px; /* Add margin to separate navigation */
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+        nav ul li {
+            margin: 0 10px;
+        }
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+        nav ul li a:hover {
+            color: #005bb5; /* Darker blue on hover */
+        }
+        main {
+            padding: 20px;
+            text-align: left; /* Align main content to the left */
+            max-width: 800px; /* Set maximum width */
+            margin: 0 auto; /* Center the content */
+        }
+        h2 {
+            color: #0073e6; /* Blue heading */
+            border-bottom: 2px solid #0073e6; /* Blue bottom border */
+            padding-bottom: 10px;
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+        p {
+            color: #666;
+            line-height: 1.5;
+        }
+        input[type="file"] {
+            margin-top: 10px;
+            width: 100%;
+        }
+        button[type="submit"] {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            display: block;
+            width: 100%;
+        }
+        button[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+        input[type="file"] {
+    margin-top: 10px;
+    width: 100%;
+    display: none; /* Hide the default file input */
+}
+
+.custom-file-upload {
+    border: 1px solid #ccc;
+    color: #007bff;
+    background-color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.custom-file-upload:hover {
+    background-color: #0056b3;
+    color: #fff;
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Health Equity Advocacy</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="co.html">Contribution</a></li>
+                <li><a href="donation.html">Donation</a></li>
+                <li><a href="Medicalcamp.html">Medical Camp</a></li>
+                <li><a href="sstory.html">Success Stories</a></li>
+                <li><a href="../login.php">Appointment Booking</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h2>Your Gift Makes a Difference</h2>
+        <p>Thank you for considering a donation to Hospital Name. Your generosity helps us provide essential care to our community, advance medical research, and invest in innovative healthcare technologies.</p>
+
+        <h3>Ways to Donate</h3>
+
+        <form action="donate.php" method="post">
+            <section class="donation-method">
+                <h4>One-Time Donation</h4>
+                <p>Make a tax-deductible contribution to support our mission. You can choose to donate a specific amount or select from our suggested donation levels.</p>
+                <label for="donation-amount">Donation Amount:</label>
+                <input type="number" id="donation-amount" name="donation-amount" min="1" required>
+
+                <ul class="suggested-donations">
+                    <li><a href="#" data-amount="25">$25</a></li>
+                    <li><a href="#" data-amount="50">$50</a></li>
+                    <li><a href="#" data-amount="100">$100</a></li>
+                    <li><a href="#" data-amount="250">$250</a></li>
+                    <li><a href="#" data-amount="">Other Amount</a></li>
+                </ul>
+            </section>
+
+            <section class="donation-method">
+                <h4>Recurring Donation (Coming Soon!)</h4>
+                <p>Make a lasting impact by setting up a monthly donation. Your ongoing support will help us achieve our long-term goals more effectively.</p>
+                <p>This feature is currently under development. In the meantime, you can set up a recurring donation by mailing a check or contacting our development office at [phone number] or [email address].</p>
+            </section>
+
+            <h3>Donate in Honor or Memory of Someone</h3>
+            <p>Make a meaningful tribute by designating your donation in honor or memory of a loved one. We will send a notification to the designated recipient acknowledging your generous gift.</p>
+
+            <label for="donation-type">Donation Type:</label>
+            <select id="donation-type" name="donation-type" required>
+                <option value="one-time">One-Time Donation</option>
+                <option value="honor-memory">Donation in Honor/Memory</option>
+            </select>
+
+            <div id="honor-memory-section">
+                <label for="honor-name">Honoree/Memorial Name:</label>
+                <input type="text" id="honor-name" name="honor-name">
+
+                <label for="honor-relationship">Relationship to You (Optional):</label>
+                <input type="text" id="honor-relationship" name="honor-relationship">
+            </div>
+
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Your Email (Optional):</label>
+            <input type="email" id="email" name="email">
+
+            <label>Additional Information</label>
+            <textarea name="additional-info" rows="5"></textarea>
+
+            <button type="submit">Donate Now</button>
+        </form>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                const suggestedDonations = document.querySelectorAll('.suggested-donations li a');
+                const donationAmountInput = document.getElementById('donation-amount');
+
+                suggestedDonations.forEach(function (link) {
+                    link.addEventListener('click', function (e) {
+                        e.preventDefault();
+                        const amount = this.getAttribute('data-amount');
+                        donationAmountInput.value = amount;
+                    });
+                });
+
+                const donationTypeSelect = document.getElementById('donation-type');
+                const honorMemorySection = document.getElementById('honor-memory-section');
+
+                donationTypeSelect.addEventListener('change', function() {
+                    if (donationTypeSelect.value === 'honor-memory') {
+                        honorMemorySection.style.display = 'block';
+                    } else {
+                        honorMemorySection.style.display = 'none';
+                    }
+                });
+            });
+        </script>
+    </main>
+</body>
+</html>

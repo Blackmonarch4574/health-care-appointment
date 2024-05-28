@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital Name - Volunteer for Rural Health Services</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f0f7f9; /* Light blue background */
+            color: #333; /* Dark text color */
+        }
+        header {
+            background-color: #0073e6; /* Blue header background */
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        main {
+            padding: 20px;
+        }
+        section {
+            margin-bottom: 20px;
+            background-color: #fff; /* White section background */
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+        }
+        h2 {
+            color: #0073e6; /* Blue heading */
+            border-bottom: 2px solid #0073e6; /* Blue bottom border */
+            padding-bottom: 10px;
+        }
+        ul {
+            list-style: disc;
+            padding-left: 20px;
+        }
+        label {
+            width: 150px;
+            display: inline-block;
+            color: #0073e6; /* Blue label text */
+            margin-bottom: 5px;
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        select,
+        textarea,
+        button {
+            width: calc(100% - 170px); /* Adjusted width */
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #0073e6; /* Blue border */
+            border-radius: 4px;
+            box-sizing: border-box;
+            margin-bottom: 10px;
+        }
+        select {
+            width: calc(100% - 160px); /* Adjusted width */
+        }
+        textarea {
+            height: 100px;
+            resize: vertical;
+        }
+        button {
+            width: auto;
+            background-color: #0073e6; /* Blue button background */
+            color: white;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #005bb5; /* Darker blue on hover */
+        }
+        .container {
+            max-width: 500px;
+            margin: 0 auto; /* Center the container */
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Make a Difference: Volunteer for Rural Health Services</h1>
+    </header>
+
+    <main>
+        <div class="container">
+            <section>
+                <h2>Be a Changemaker: Volunteer with Us!</h2>
+                <p>We believe everyone deserves access to quality healthcare, regardless of location. We partner with health NGOs to provide essential medical services to underserved rural communities.</p>
+                <p>We're looking for passionate individuals who want to make a positive impact. As a volunteer, you'll play a vital role in supporting our mission. You'll have the opportunity to:</p>
+                <ul>
+                    <li>Assist healthcare professionals in various capacities.</li>
+                    <li>Raise awareness about health issues in rural communities.</li>
+                    <li>Organize educational workshops and health camps.</li>
+                    <li>Contribute to building a healthier future for rural populations.</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>Apply to Volunteer</h2>
+                <p>If you're passionate about healthcare, social responsibility, and making a difference, we encourage you to apply!</p>
+
+                <form action="volunteering.php" method="post">
+                    <label for="name">Full Name:</label>
+                    <input type="text" id="name" name="name" required>
+
+                    <label for="email">Email Address:</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="phone">Phone Number:</label>
+                    <input type="tel" id="phone" name="phone">
+
+                    <label for="availability">Availability:</label>
+                    <select id="availability" name="availability">
+                        <option value="">Select your availability</option>
+                        <option value="weekends">Weekends only</option>
+                        <option value="evenings">Evenings (after 5 PM)</option>
+                        <option value="flexible">Flexible hours</option>
+                    </select>
+
+                    <label for="skills">Skills and Experience:</label>
+                    <textarea id="skills" name="skills"></textarea>
+
+                    <label for="motivation">Motivation:</label>
+                    <textarea id="motivation" name="motivation"></textarea>
+<center>
+                    <button type="submit">Submit Application</button>
+                </center>
+                </form>
+
+            </section>
+        </div>
+    </main>
+
+</body>
+</html>

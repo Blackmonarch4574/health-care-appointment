@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Contribution Form</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f7f9; /* Light blue background */
+            color: #333; /* Dark text color */
+        }
+        header {
+            background: #0073e6; /* Blue header background */
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+        nav {
+            margin-top: 20px; /* Add margin to separate navigation */
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+        nav ul li {
+            margin: 0 10px;
+        }
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+        nav ul li a:hover {
+            color: #005bb5; /* Darker blue on hover */
+        }
+        main {
+            padding: 20px;
+            text-align: left; /* Align main content to the left */
+            max-width: 800px; /* Set maximum width */
+            margin: 0 auto; /* Center the content */
+        }
+        h2 {
+            color: #0073e6; /* Blue heading */
+            border-bottom: 2px solid #0073e6; /* Blue bottom border */
+            padding-bottom: 10px;
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+        p {
+            color: #666;
+            line-height: 1.5;
+        }
+        input[type="file"] {
+            margin-top: 10px;
+            width: 100%;
+        }
+        button[type="submit"] {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            display: block;
+            width: 100%;
+        }
+        button[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+        input[type="file"] {
+    margin-top: 10px;
+    width: 100%;
+    display: none; /* Hide the default file input */
+}
+
+.custom-file-upload {
+    border: 1px solid #ccc;
+    color: #007bff;
+    background-color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.custom-file-upload:hover {
+    background-color: #0056b3;
+    color: #fff;
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Health Equity Advocacy</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="co.html">Contribution</a></li>
+                <li><a href="donation.html">Donation</a></li>
+                <li><a href="Medicalcamp.html">Medical Camp</a></li>
+                <li><a href="sstory.html">Success Stories</a></li>
+                <li><a href="../login.php">Appointment Booking</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h2>Contribute Your Data</h2>
+        <p>
+            Welcome! We invite you to contribute to our research project by uploading your medical documents. Your contributions will help researchers gain valuable insights into various medical conditions and improve patient care.
+        </p>
+        <form action="contri.php" method="post" enctype="multipart/form-data">
+            <label for="fileUpload" class="custom-file-upload" id="fileInputLabel">Choose File</label>
+            <input type="file" id="fileUpload" name="fileUpload" accept=".pdf, .doc, .docx" onchange="updateFileName(this)">
+            <button type="submit">Upload</button>
+        </form>
+    </main>
+</body>
+<script>
+    function updateFileName(input) {
+        var label = document.getElementById('fileInputLabel');
+        if (input.files.length > 0) {
+            label.innerText = input.files[0].name;
+        } else {
+            label.innerText = 'Choose File';
+        }
+    }
+</script>
+</html>
